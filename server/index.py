@@ -2,13 +2,17 @@ from flask import Flask, jsonify, request
 import firebase_admin
 from firebase_admin import credentials, db
 import logging
+import os
+import json
 from server.model.retrieval_model import encode_sentence, get_encoding_similarities
 from server.model.stt_model import speech_to_text
 
 app = Flask(__name__)
 
 # Initialize Firebase
-cred = credentials.Certificate("server/private_key.json")
+private_key = os.environ.get("PRIVATE_KEY")
+firebase_credentials = json.loads(private_key)
+cred = credentials.Certificate(firebase_credentials)
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://notebookai-79e56-default-rtdb.firebaseio.com/'
 })
@@ -198,3 +202,32 @@ def delete_notes(device_id):
     except Exception as e:
         logger.error(f"Error deleting notes for Device ID: {device_id}: {str(e)}")
         return jsonify({"error": "Failed to delete notes"}), 500  # Internal Server Error
+    
+@app.route('/update_note', methods=['PUT'])
+def update_note_db():
+    json_string = request.get_json()
+    device_id = json_string.get("device_id")  # Get device ID from the request
+    note_id = json_string.get("note_id")      # Get note ID from the request
+    new_note_text = json_string.get("note")   # Get the new note text from the request
+
+    logger.info("\n")
+
+    if not device_id or not note_id or not new_note_text:
+        logger.error("Update Note: Device ID, Note ID, and new note text are required")
+        return jsonify({"error": "Device ID, Note ID, and new note text are required"}), 400
+
+    # Reference to the specific note using device_id and note_id
+    ref = db.reference(f'notes/{device_id}/{note_id}')
+
+    if ref.get() is None:
+            logger.error(f"Update Note: Note ID {note_id} not found for Device ID: {device_id}")
+            return jsonify({"error": "Note not found"}), 404  # Not Found status
+
+    try:
+        # Update the note text in Firebase
+        ref.update({'note': new_note_text})
+        logger.info(f"Updated Note: '{new_note_text}' for Device ID: {device_id} and Note ID: {note_id}")
+        return jsonify({"message": "Note updated successfully"}), 200  # OK status
+    except Exception as e:
+        logger.error(f"Error updating note for Device ID: {device_id}, Note ID: {note_id}: {str(e)}")
+        return jsonify({"error": "Failed to update note"}), 500  # Internal Server Error
