@@ -62,12 +62,16 @@ def add_note_db():
         logger.warning(f"Add Note: Duplicate note found for Device ID: {device_id}")
         return jsonify({"error": "Duplicate note found"}), 409  # Conflict status code
 
-    ref.push({
-        'note': note,
-        'embedding': note_embedding,
-        'folder': folder,
-        'notebook': notebook
-    })
+    try:
+        ref.push({
+            'note': note,
+            'embedding': note_embedding,
+            'folder': folder,
+            'notebook': notebook
+        })
+    except Exception as e:
+        logger.error(f"Error adding note to database: {str(e)}")
+        return jsonify({"error": "Failed to get add note"}), 500  # Internal Server Error
 
     logger.info(f"{device_id} Added Note: '{note}'")
 
@@ -91,24 +95,27 @@ def get_response_db():
         logger.warning("Ask Question: No note data found, returning empty list")
         return jsonify([]), 200  # Return an empty list if no notes
 
-    # Extract embeddings and calculate similarities
-    question_embedding = encode_sentence(question)
+    try:
+        # Extract embeddings and calculate similarities
+        question_embedding = encode_sentence(question)
 
-    logger.info("\n")
-    logger.info(f"{device_id} Asked Question: '{question}'")
+        logger.info("\n")
+        logger.info(f"{device_id} Asked Question: '{question}'")
 
-    note_embeddings = []
-    notes = []
-    for key, value in notes_data.items():
-        notes.append(value['note'])
-        note_embeddings.append(value['embedding'])
+        note_embeddings = []
+        notes = []
+        for key, value in notes_data.items():
+            notes.append(value['note'])
+            note_embeddings.append(value['embedding'])
 
-    similarities = get_encoding_similarities(question_embedding, note_embeddings)
-    
-    # Find closest match in the database
-    max_val, max_idx = similarities.max(1)
-    answer = notes[max_idx]
-
+        similarities = get_encoding_similarities(question_embedding, note_embeddings)
+        
+        # Find closest match in the database
+        max_val, max_idx = similarities.max(1)
+        answer = notes[max_idx]
+    except Exception as e:
+        logger.error(f"Error getting question response: {str(e)}")
+        return jsonify({"error": "Failed to get question response"}), 500  # Internal Server Error
 
     logger.info(f"{device_id} Got Response: '{answer}'")
     return jsonify({"response": answer}), 200
@@ -155,17 +162,22 @@ def sync_database_db():
 
     logger.info(f"Sync Database: Syncing notes for Device ID: {device_id}")
     
-    # Clear existing notes in Firebase
-    ref = db.reference(f'notes/{device_id}')
-    ref.delete()  # Deletes all existing notes
+    try:
+        # Clear existing notes in Firebase
+        ref = db.reference(f'notes/{device_id}')
+        ref.delete()  # Deletes all existing notes
 
-    for note in notes:
-        note_embedding = encode_sentence(note)
-        # Save note and its embedding to Firebase
-        ref.push({
-            'note': note,
-            'embedding': note_embedding
-        })
+        for note in notes:
+            note_embedding = encode_sentence(note)
+            # Save note and its embedding to Firebase
+            ref.push({
+                'note': note,
+                'embedding': note_embedding
+            })
+    except Exception as e:
+        logger.error(f"Error syncinc database: {str(e)}")
+        return jsonify({"error": "Failed to sync database"}), 500  # Internal Server Error
+    
     return '', 200
 
 @app.route('/speech_to_text', methods=['POST'])
@@ -183,7 +195,11 @@ def speech_to_text_db():
         logger.error("STT: No file selected")
         return jsonify({'error': 'No file selected'}), 400
     
-    text_result = speech_to_text(audio_file)
+    try:
+        text_result = speech_to_text(audio_file)
+    except Exception as e:
+        logger.error(f"Error converting audio to text: {str(e)}")
+        return jsonify({"error": "Failed to convert audio"}), 500  # Internal Server Error
     
     return jsonify({'text': text_result}), 200
 
