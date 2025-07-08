@@ -220,10 +220,19 @@ def update_note_db():
     ref = db.reference(f'notes/{device_id}/{note_id}')
 
     if ref.get() is None:
-            logger.error(f"Update Note: Note ID {note_id} not found for Device ID: {device_id}")
-            return jsonify({"error": "Note not found"}), 404  # Not Found status
+        logger.error(f"Update Note: Note ID {note_id} not found for Device ID: {device_id}")
+        return jsonify({"error": "Note not found"}), 404  # Not Found status
 
     try:
+        # Retrieve the original note text
+        original_note_data = ref.get()
+        original_note_text = original_note_data.get('note')
+
+        # Check if the new note text is the same as the original
+        if original_note_text == new_note_text:
+            logger.info(f"No update needed for Note ID: {note_id} as the text is unchanged.")
+            return jsonify({"message": "No update needed; the note text is unchanged."}), 200  # OK status
+
         # Update the note text in Firebase
         ref.update({'note': new_note_text})
         new_note_embedding = encode_sentence(new_note_text)
