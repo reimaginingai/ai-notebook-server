@@ -1,0 +1,15 @@
+name: Docker Image CI for GHCR
+
+on:
+  push
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and push the Image
+        run: |
+          docker login --username daniel-theunissen --password ${{ secrets.GHCR_KEY}} ghcr.io
+          docker build . --tag ghcr.io/daniel-theunissen/notebook-ai-api:latest
+          docker push ghcr.io/daniel-theunissen/notebook-ai-api:latest
