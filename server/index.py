@@ -226,6 +226,8 @@ def update_note_db():
     try:
         # Update the note text in Firebase
         ref.update({'note': new_note_text})
+        new_note_embedding = encode_sentence(new_note_text)
+        ref.update({'embedding': new_note_embedding})
         logger.info(f"Updated Note: '{new_note_text}' for Device ID: {device_id} and Note ID: {note_id}")
         return jsonify({"message": "Note updated successfully"}), 200  # OK status
     except Exception as e:
