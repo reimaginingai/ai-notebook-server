@@ -50,17 +50,17 @@ def add_note_db():
     
     note_embedding = encode_sentence(note)
 
-    # FIXME: Duplicate notes are not always unintentional, maybe make some type of time threshold between requests?
-    ref = db.reference(f'notes/{device_id}')
-    try:
-        existing_notes = ref.order_by_child('note').equal_to(note).get()
-    except Exception as e:
-        logger.error(f"Error checking for existing notes: {str(e)}")
-        return jsonify({"error": "Internal server error"}), 500
+    # # FIXME: Duplicate notes are not always unintentional, maybe make some type of time threshold between requests?
+    # ref = db.reference(f'notes/{device_id}')
+    # try:
+    #     existing_notes = ref.order_by_child('note').equal_to(note).get()
+    # except Exception as e:
+    #     logger.error(f"Error checking for existing notes: {str(e)}")
+    #     return jsonify({"error": "Internal server error"}), 500
 
-    if existing_notes:
-        logger.warning(f"Add Note: Duplicate note found for Device ID: {device_id}")
-        return jsonify({"error": "Duplicate note found"}), 409  # Conflict status code
+    # if existing_notes:
+    #     logger.warning(f"Add Note: Duplicate note found for Device ID: {device_id}")
+    #     return jsonify({"error": "Duplicate note found"}), 409  # Conflict status code
 
     try:
         new_note_ref = ref.push({
