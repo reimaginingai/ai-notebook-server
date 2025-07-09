@@ -63,13 +63,13 @@ def add_note_db():
         return jsonify({"error": "Duplicate note found"}), 409  # Conflict status code
 
     try:
-        ref.push({
+        new_note_ref = ref.push({
             'note': note,
             'embedding': note_embedding,
             'folder': folder,
             'notebook': notebook
         })
-        note_id = ref.key
+        note_id = new_note_ref.key
     except Exception as e:
         logger.error(f"Error adding note to database: {str(e)}")
         return jsonify({"error": "Failed to get add note"}), 500  # Internal Server Error
@@ -207,7 +207,7 @@ def speech_to_text_db():
     
     return jsonify({'text': text_result}), 200
 
-@app.route('/delete_notes/<device_id>', methods=['DELETE'])
+@app.route('/delete_user_notes/<device_id>', methods=['DELETE'])
 def delete_notes(device_id):
     # Reference to the notes for the specific device ID
     ref = db.reference(f'notes/{device_id}')
@@ -222,6 +222,22 @@ def delete_notes(device_id):
     except Exception as e:
         logger.error(f"Error deleting notes for Device ID: {device_id}: {str(e)}")
         return jsonify({"error": "Failed to delete notes"}), 500  # Internal Server Error
+    
+@app.route('/delete_note/<device_id>/<note_id>', methods=['DELETE'])
+def delete_note(device_id, note_id):
+    # Reference to the specific note for the device ID
+    ref = db.reference(f'notes/{device_id}/{note_id}')
+
+    logger.info("\n")
+    
+    # Attempt to delete the specific note
+    try:
+        ref.delete()  # This will delete the specific note under the specified device ID
+        logger.info(f"Deleted note ID: {note_id} for Device ID: {device_id}")
+        return jsonify({"message": f"Note ID: {note_id} deleted successfully"}), 204  # No Content status
+    except Exception as e:
+        logger.error(f"Error deleting note ID: {note_id} for Device ID: {device_id}: {str(e)}")
+        return jsonify({"error": "Failed to delete note"}), 500  # Internal Server Error
     
 @app.route('/update_note', methods=['PUT'])
 def update_note_db():
