@@ -69,19 +69,22 @@ def add_note_db():
             'folder': folder,
             'notebook': notebook
         })
+        note_id = ref.key
     except Exception as e:
         logger.error(f"Error adding note to database: {str(e)}")
         return jsonify({"error": "Failed to get add note"}), 500  # Internal Server Error
 
     logger.info(f"{device_id} Added Note: '{note}'")
 
-    return '', 204
+    return jsonify({"id": note_id}), 201
 
 @app.route('/get_response', methods=['POST'])
 def get_response_db():
     json_string = request.get_json()
     device_id = json_string.get("device_id")  # Get device ID from the request
     question = json_string.get("question")
+
+    logger.info("\n")
     
     if not device_id or not question:
         logger.error("Ask Question: Device ID and note are required")
@@ -99,7 +102,6 @@ def get_response_db():
         # Extract embeddings and calculate similarities
         question_embedding = encode_sentence(question)
 
-        logger.info("\n")
         logger.info(f"{device_id} Asked Question: '{question}'")
 
         note_embeddings = []
@@ -144,7 +146,9 @@ def get_user_notes():
         'notebook': value['notebook']
     } for key, value in notes_data.items()]
 
-    logger.info(f"Get User Notes: Got notes for Device ID: {device_id}")
+    num_notes = len(notes)
+
+    logger.info(f"Get User Notes: Got {num_notes} notes for Device ID: {device_id}")
     
     return jsonify(notes), 200
 
