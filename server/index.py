@@ -51,7 +51,7 @@ def add_note_db():
     note_embedding = encode_sentence(note)
 
     # # FIXME: Duplicate notes are not always unintentional, maybe make some type of time threshold between requests?
-    # ref = db.reference(f'notes/{device_id}')
+    ref = db.reference(f'notes/{device_id}')
     # try:
     #     existing_notes = ref.order_by_child('note').equal_to(note).get()
     # except Exception as e:
