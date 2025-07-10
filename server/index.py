@@ -4,7 +4,7 @@ from firebase_admin import credentials, db
 import logging
 import os
 import json
-from server.model.retrieval_model import encode_sentence, get_encoding_similarities
+from server.model.retrieval_model import encode_sentence, get_encoding_similarities, get_top_k_indices
 from server.model.stt_model import speech_to_text
 
 app = Flask(__name__)
@@ -80,12 +80,17 @@ def add_note_db():
 
 @app.route('/get_response', methods=['POST'])
 def get_response_db():
+    logger.info("\n")
+
     json_string = request.get_json()
     device_id = json_string.get("device_id")  # Get device ID from the request
     question = json_string.get("question")
+    try:
+        k = int(json_string.get("k"))
+    except Exception as e:
+        logger.warning(" Ask Question: K parameter not specified. Returning top answer")
+        k = 1
 
-    logger.info("\n")
-    
     if not device_id or not question:
         logger.error("Ask Question: Device ID and note are required")
         return jsonify({"error": "Device ID and question are required"}), 400
@@ -97,10 +102,10 @@ def get_response_db():
     if notes_data is None:
         logger.warning("Ask Question: No note data found, returning empty list")
         return jsonify([]), 200  # Return an empty list if no notes
-
+    
     try:
         # Extract embeddings and calculate similarities
-        question_embedding = encode_sentence(question)
+        question_embedding = encode_sentence(question)        
 
         logger.info(f"{device_id} Asked Question: '{question}'")
 
@@ -111,16 +116,21 @@ def get_response_db():
             note_embeddings.append(value['embedding'])
 
         similarities = get_encoding_similarities(question_embedding, note_embeddings)
+        k = min(k, len(notes)) # make sure k isn't too high
+        top_indices, top_values = get_top_k_indices(similarities, k)
         
-        # Find closest match in the database
-        max_val, max_idx = similarities.max(1)
-        answer = notes[max_idx]
+        top_answers = [notes[i] for i in top_indices[0].tolist()]
+   
     except Exception as e:
         logger.error(f"Error getting question response: {str(e)}")
         return jsonify({"error": "Failed to get question response"}), 500  # Internal Server Error
+    
+    logger.info(f"{device_id} Got Response: '{top_answers}'")
 
-    logger.info(f"{device_id} Got Response: '{answer}'")
-    return jsonify({"response": answer}), 200
+    # Create a JSON object with each answer as a separate element
+    response = {f"answer_{i:03}": answer for i, answer in enumerate(top_answers)}
+
+    return jsonify(response), 200
 
 @app.route('/get_user_notes', methods=['GET'])
 def get_user_notes():

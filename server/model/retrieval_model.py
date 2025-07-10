@@ -1,5 +1,6 @@
 from sentence_transformers import SentenceTransformer, CrossEncoder
 import numpy as np
+import torch
 
 # Choose sentence transformer (biencoder) model
 biencoder_model = SentenceTransformer("all-mpnet-base-v2")
@@ -56,4 +57,11 @@ def get_cross_encoder_similarities(query, memos):
     """
     scores = cross_encoder_model.predict([(query, memo) for memo in memos])
     return scores
+
+def get_top_k_indices(similarities, k):
+    # Get the top k most similar answers
+    top_values, top_indices = torch.topk(similarities, k)
+    return top_indices, top_values
+
+        
 
