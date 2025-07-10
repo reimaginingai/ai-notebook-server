@@ -288,3 +288,41 @@ def update_note_db():
     except Exception as e:
         logger.error(f"Error updating note for Device ID: {device_id}, Note ID: {note_id}: {str(e)}")
         return jsonify({"error": "Failed to update note"}), 500  # Internal Server Error
+    
+@app.route('/submit_feedback', methods=['POST'])
+def submit_feedback():
+    logger.info("\n")
+
+    json_string = request.get_json()
+    
+    try:
+        username = json_string.get("username") 
+        question = json_string.get("question")
+        answer = json_string.get("answer")
+        is_pair = int(json_string.get("is_pair"))
+    except Exception as e:
+        logger.error(f"Error parsing info: {str(e)}")
+        return jsonify({"error": "Error parsing info"}), 500
+    
+    if not username or not question or not answer or not is_pair:
+        logger.error("Submit Feedback: Missing info")
+        return jsonify({"error": "Missing info"}), 400
+    
+    if is_pair == 1:
+        logger.info(f"Got positive pair: {question} - {answer} by {username}")
+    else:
+        logger.info(f"Got negative pair: {question} - {answer} by {username}")
+        
+    ref = db.reference(f'qa-pairs/')
+    try:
+        ref.push({
+            'question': question,
+            'answer': answer,
+            'username': username, 
+            'is_pair': is_pair
+        })
+    except Exception as e:
+        logger.error(f"Error adding qa pair to database: {str(e)}")
+        return jsonify({"error": "Failed to add qa pair"}), 500  # Internal Server Error
+   
+    return '', 200
