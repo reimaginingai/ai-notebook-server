@@ -5,7 +5,7 @@ import logging
 import os
 import json
 from server.model.retrieval_model import encode_sentence, get_encoding_similarities, get_top_k_indices
-from server.model.stt_model import speech_to_text
+# from server.model.stt_model import speech_to_text
 
 app = Flask(__name__)
 
@@ -27,7 +27,7 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger(__name__)
 
 @app.route('/add_note', methods=['POST'])
-def add_note_db():
+def add_note():
     json_string = request.get_json()
     device_id = json_string.get("device_id")  # Get device ID from the request
     folder = json_string.get("folder")
@@ -50,17 +50,19 @@ def add_note_db():
     
     note_embedding = encode_sentence(note)
 
-    # # FIXME: Duplicate notes are not always unintentional, maybe make some type of time threshold between requests?
     ref = db.reference(f'notes/{device_id}')
-    # try:
-    #     existing_notes = ref.order_by_child('note').equal_to(note).get()
-    # except Exception as e:
-    #     logger.error(f"Error checking for existing notes: {str(e)}")
-    #     return jsonify({"error": "Internal server error"}), 500
+    
+    # FIXME: Duplicate notes are not always unintentional, maybe make some type of time threshold between requests?
+    if os.environ.get("DUPLICATE_NOTE_CHECKING") == "TRUE":
+        try:
+            existing_notes = ref.order_by_child('note').equal_to(note).get()
+        except Exception as e:
+            logger.error(f"Error checking for existing notes: {str(e)}")
+            return jsonify({"error": "Internal server error"}), 500
 
-    # if existing_notes:
-    #     logger.warning(f"Add Note: Duplicate note found for Device ID: {device_id}")
-    #     return jsonify({"error": "Duplicate note found"}), 409  # Conflict status code
+        if existing_notes:
+            logger.warning(f"Add Note: Duplicate note found for Device ID: {device_id}")
+            return jsonify({"error": "Duplicate note found"}), 409  # Conflict status code
 
     try:
         new_note_ref = ref.push({
@@ -79,7 +81,7 @@ def add_note_db():
     return jsonify({"id": note_id}), 201
 
 @app.route('/get_response', methods=['POST'])
-def get_response_db():
+def get_response():
     logger.info("\n")
 
     json_string = request.get_json()
@@ -162,63 +164,8 @@ def get_user_notes():
     
     return jsonify(notes), 200
 
-@app.route('/sync_database', methods=['POST'])
-def sync_database_db():
-    json_string = request.get_json()
-    device_id = json_string.get("device_id")  # Get device ID from the request
-    notes = json_string.get("notes")
-
-    logger.info("\n")
-    
-    if not device_id or not isinstance(notes, list):
-        logger.error("Sync Database: Device ID and notes list are required")
-        return jsonify({"error": "Device ID and notes list are required"}), 400
-
-    logger.info(f"Sync Database: Syncing notes for Device ID: {device_id}")
-    
-    try:
-        # Clear existing notes in Firebase
-        ref = db.reference(f'notes/{device_id}')
-        ref.delete()  # Deletes all existing notes
-
-        for note in notes:
-            note_embedding = encode_sentence(note)
-            # Save note and its embedding to Firebase
-            ref.push({
-                'note': note,
-                'embedding': note_embedding
-            })
-    except Exception as e:
-        logger.error(f"Error syncinc database: {str(e)}")
-        return jsonify({"error": "Failed to sync database"}), 500  # Internal Server Error
-    
-    return '', 200
-
-@app.route('/speech_to_text', methods=['POST'])
-def speech_to_text_db():
-
-    logger.info("\n")
-
-    if 'audio' not in request.files:
-        logger.error("STT: No audio file provided")
-        return jsonify({'error': 'No audio file provided'}), 400
-    
-    audio_file = request.files['audio']
-    
-    if audio_file.filename == '':
-        logger.error("STT: No file selected")
-        return jsonify({'error': 'No file selected'}), 400
-    
-    try:
-        text_result = speech_to_text(audio_file)
-    except Exception as e:
-        logger.error(f"Error converting audio to text: {str(e)}")
-        return jsonify({"error": "Failed to convert audio"}), 500  # Internal Server Error
-    
-    return jsonify({'text': text_result}), 200
-
 @app.route('/delete_user_notes/<device_id>', methods=['DELETE'])
-def delete_notes(device_id):
+def delete_user_notes(device_id):
     # Reference to the notes for the specific device ID
     ref = db.reference(f'notes/{device_id}')
 
@@ -250,7 +197,7 @@ def delete_note(device_id, note_id):
         return jsonify({"error": "Failed to delete note"}), 500  # Internal Server Error
     
 @app.route('/update_note', methods=['PUT'])
-def update_note_db():
+def update_note():
     json_string = request.get_json()
     device_id = json_string.get("device_id")  # Get device ID from the request
     note_id = json_string.get("note_id")      # Get note ID from the request
@@ -326,3 +273,59 @@ def submit_feedback():
         return jsonify({"error": "Failed to add qa pair"}), 500  # Internal Server Error
    
     return '', 200
+
+### DEPRECATED ENDPOINTS
+# @app.route('/sync_database', methods=['POST'])
+# def sync_database_db():
+#     json_string = request.get_json()
+#     device_id = json_string.get("device_id")  # Get device ID from the request
+#     notes = json_string.get("notes")
+
+#     logger.info("\n")
+    
+#     if not device_id or not isinstance(notes, list):
+#         logger.error("Sync Database: Device ID and notes list are required")
+#         return jsonify({"error": "Device ID and notes list are required"}), 400
+
+#     logger.info(f"Sync Database: Syncing notes for Device ID: {device_id}")
+    
+#     try:
+#         # Clear existing notes in Firebase
+#         ref = db.reference(f'notes/{device_id}')
+#         ref.delete()  # Deletes all existing notes
+
+#         for note in notes:
+#             note_embedding = encode_sentence(note)
+#             # Save note and its embedding to Firebase
+#             ref.push({
+#                 'note': note,
+#                 'embedding': note_embedding
+#             })
+#     except Exception as e:
+#         logger.error(f"Error syncinc database: {str(e)}")
+#         return jsonify({"error": "Failed to sync database"}), 500  # Internal Server Error
+    
+#     return '', 200
+
+# @app.route('/speech_to_text', methods=['POST'])
+# def speech_to_text_db():
+
+#     logger.info("\n")
+
+#     if 'audio' not in request.files:
+#         logger.error("STT: No audio file provided")
+#         return jsonify({'error': 'No audio file provided'}), 400
+    
+#     audio_file = request.files['audio']
+    
+#     if audio_file.filename == '':
+#         logger.error("STT: No file selected")
+#         return jsonify({'error': 'No file selected'}), 400
+    
+#     try:
+#         text_result = speech_to_text(audio_file)
+#     except Exception as e:
+#         logger.error(f"Error converting audio to text: {str(e)}")
+#         return jsonify({"error": "Failed to convert audio"}), 500  # Internal Server Error
+    
+#     return jsonify({'text': text_result}), 200
