@@ -112,16 +112,25 @@ def get_response():
         logger.info(f"{device_id} Asked Question: '{question}'")
 
         note_embeddings = []
-        notes = []
+        notes = []    # <--
+        note_ids = [] # <-- ts probably ass idk how to fix
+        folders = []  # <--
+        notebooks = []# <--
         for key, value in notes_data.items():
             notes.append(value['note'])
             note_embeddings.append(value['embedding'])
+            folders.append(value['folder'])
+            notebooks.append(value['notebook'])
+            note_ids.append(key)
 
         similarities = get_encoding_similarities(question_embedding, note_embeddings)
         k = min(k, len(notes)) # make sure k isn't too high
         top_indices, top_values = get_top_k_indices(similarities, k)
         
         top_answers = [notes[i] for i in top_indices[0].tolist()]
+        top_ids = [note_ids[i] for i in top_indices[0].tolist()]
+        top_folders = [folders[i] for i in top_indices[0].tolist()]
+        top_notebooks = [notebooks[i] for i in top_indices[0].tolist()]
    
     except Exception as e:
         logger.error(f"Error getting question response: {str(e)}")
@@ -129,8 +138,7 @@ def get_response():
     
     logger.info(f"{device_id} Got Response: '{top_answers}'")
 
-    # Create a JSON object with each answer as a separate element
-    response = {f"answer_{i:03}": answer for i, answer in enumerate(top_answers)}
+    response = [{"id": top_ids[i], "answer": top_answers[i], "folder": top_folders[i], "notebook": top_notebooks[i]} for i in range(len(top_answers))]
 
     return jsonify(response), 200
 
