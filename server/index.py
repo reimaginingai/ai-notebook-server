@@ -241,7 +241,7 @@ def submit_feedback():
     logger.info("\n")
 
     json_string = request.get_json()
-    
+
     try:
         username = json_string.get("username") 
         question = json_string.get("question")
@@ -251,7 +251,7 @@ def submit_feedback():
         logger.error(f"Error parsing info: {str(e)}")
         return jsonify({"error": "Error parsing info"}), 500
     
-    if not username or not question or not answer or not is_pair:
+    if not username or not question or not answer:
         logger.error("Submit Feedback: Missing info")
         return jsonify({"error": "Missing info"}), 400
     
