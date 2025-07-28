@@ -32,3 +32,5 @@ Start the server using `./start_server.sh`
 The server should be hosted locally on port 5000
 
 Use the provided shell scripts to test the endpoints.
+
+Or use the provided container.
