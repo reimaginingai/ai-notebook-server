@@ -5,7 +5,9 @@ import logging
 import os
 import json
 from server.model.retrieval_model import encode_sentence, get_encoding_similarities, get_top_k_indices
-# from server.model.stt_model import speech_to_text
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
