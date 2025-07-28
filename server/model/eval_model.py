@@ -112,6 +112,6 @@ def eval_cross_encoder_model(truth_table):
     return top1_accuracy, top3_accuracy
 
 # Uncomment to test cross-encoder by itself.
-top1_accuracy, top3_accuracy = eval_cross_encoder_model('server/model/initial_training_data_notetaker.csv')
+top1_accuracy, top3_accuracy = eval_biencoder_model('server/model/initial_training_data_notetaker.csv')
 print(f'% top choices correct: {top1_accuracy}')
 print(f'% correct answer in top 3 choices: {top3_accuracy}')

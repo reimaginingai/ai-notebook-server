@@ -51,4 +51,5 @@ EXPOSE 5000
 
 # Run the application.
 # CMD gunicorn 'server.index:app' --bind=0.0.0.0:5000
-CMD ./start_server.sh
+# CMD ./start_server.sh
+CMD ["gunicorn", "--config", "server/gunicorn_config.py", "--access-logfile", "-", "server.index:app"]

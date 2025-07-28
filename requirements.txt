@@ -9,3 +9,4 @@ pandas==2.2.3
 python-dotenv==1.1.1
 torch==2.5.1
 torchvision==0.20.1
+gunicorn
