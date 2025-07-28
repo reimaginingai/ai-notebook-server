@@ -19,14 +19,25 @@ firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://notebookai-79e56-default-rtdb.firebaseio.com/'
 })
 
+log_format = '[%(asctime)s] - %(name)s - %(levelname)s - %(message)s'
+
 # Configure logging
 logging.basicConfig(level=logging.INFO, 
-                    format='[%(asctime)s] - %(name)s - %(levelname)s - %(message)s',
+                    format=log_format,
                     handlers=[
                         logging.FileHandler("app.log"),
                         logging.StreamHandler()
                     ])
 logger = logging.getLogger(__name__)
+
+# Configure Werkzeug logging
+werkzeug_logger = logging.getLogger('werkzeug')
+werkzeug_logger.setLevel(logging.INFO) 
+werkzeug_logger.handlers = []
+werkzeug_logger.addHandler(logging.StreamHandler())
+werkzeug_logger.addHandler(logging.FileHandler("app.log"))
+for handler in werkzeug_logger.handlers:
+    handler.setFormatter(logging.Formatter(log_format))
 
 @app.route('/add_note', methods=['POST'])
 def add_note():
