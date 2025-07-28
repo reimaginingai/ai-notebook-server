@@ -1,7 +1,7 @@
 name: Docker Image CI for GHCR
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   build_and_publish:
@@ -24,6 +24,6 @@ jobs:
         with:
           context: . 
           push: true  
-          tags: ghcr.io/daniel-theunissen/notebook-ai-api:prod
+          tags: ghcr.io/daniel-theunissen/notebook-ai-api:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
