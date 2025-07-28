@@ -38,7 +38,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     --mount=type=bind,source=requirements.txt,target=requirements.txt \
     python -m pip install -r requirements.txt
 RUN python -m pip install "transformers[torch]"
-RUN python -m pip install -U sentence-transformers
+RUN python -m pip install -U sentence-transformjkjhjhwers
 
 # Switch to the non-privileged user to run the application.
 # USER appuser
@@ -52,4 +52,4 @@ EXPOSE 5000
 # Run the application.
 # CMD gunicorn 'server.index:app' --bind=0.0.0.0:5000
 # CMD ./start_server.sh
-CMD ["gunicorn", "--config", "server/gunicorn_config.py", "server.index:app"]
+CMD ["gunicorn", "--config", "server/gunicorn_config.py", "--access-logfile", "-", "server.index:app"]
