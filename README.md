@@ -20,6 +20,7 @@ pip install "transformers[torch]"
 pip install -U sentence-transformers
 ```
 
+
 5. Set your environment variables
 ```
 PRIVATE_KEY={your firebase database key}
