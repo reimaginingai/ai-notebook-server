@@ -148,7 +148,7 @@ def prepopulate_notes():
 
     app.logger.info("\n")
     print(device_id, notes_file)
-    subprocess.run(["./pre_load_notes.py", device_id, notes_file])
+    subprocess.run(["./pre_load_notes.py", notes_file, device_id])
     if not device_id:
         app.logger.error("Get User Notes: Device ID is required")
         return jsonify({"error": "Device ID is required"}), 400
