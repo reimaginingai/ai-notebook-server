@@ -3,6 +3,10 @@ name: Docker Image CI for GHCR
 on:
   push:
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build_and_publish:
     runs-on: ubuntu-latest
