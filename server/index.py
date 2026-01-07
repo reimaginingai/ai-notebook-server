@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 import firebase_admin
+import subprocess
 from firebase_admin import credentials, db
 import logging
 import os
@@ -139,6 +140,23 @@ def get_response():
     response = [{"id": top_ids[i], "answer": top_answers[i], "folder": top_folders[i], "notebook": top_notebooks[i]} for i in range(len(top_answers))]
 
     return jsonify(response), 200
+
+@app.route('/prepopulate_notes', methods=['GET'])
+def prepopulate_notes():
+    device_id = request.args.get('device_id')  # Get device ID from query parameters
+    notes_file = request.args.get('notes_file')  # The file of notes to preload
+
+    app.logger.info("\n")
+    print(device_id, notes_file)
+    subprocess.run(["./pre_load_notes.py", device_id, notes_file])
+    if not device_id:
+        app.logger.error("Get User Notes: Device ID is required")
+        return jsonify({"error": "Device ID is required"}), 400
+    if not notes_file:
+        app.logger.error("Prepopulate Notes: Notes File is required")
+        return jsonify({"error": "Notes File is required"}), 400
+
+    return jsonify([]), 200  # Return an empty list if no notes
 
 @app.route('/get_user_notes', methods=['GET'])
 def get_user_notes():
