@@ -1,0 +1,321 @@
+Group,Note
+Desktop Screen Readers (JAWS),In JAWS the command Insert + F7 brings up a list of all links on the current webpage.
+Desktop Screen Readers (JAWS),To list all headings on a webpage in JAWS press Insert + F6.
+Desktop Screen Readers (JAWS),The JAWS key is usually the Insert key on a desktop keyboard layout.
+Desktop Screen Readers (JAWS),On a laptop layout the JAWS key often defaults to the Caps Lock key.
+Desktop Screen Readers (JAWS),Pressing Insert + F10 in JAWS brings up the list of currently open windows.
+Desktop Screen Readers (JAWS),To access the System Tray icons in JAWS press Insert + F11.
+Desktop Screen Readers (JAWS),Insert + Down Arrow initiates the Say All command to read continuously from the cursor location.
+Desktop Screen Readers (JAWS),To silence JAWS speech immediately press the Control key.
+Desktop Screen Readers (JAWS),The JAWS Cursor is a mouse pointer simulator that allows you to navigate areas the standard PC cursor cannot reach.
+Desktop Screen Readers (JAWS),The PC Cursor in JAWS follows the system focus and is used for general typing and navigation.
+Desktop Screen Readers (JAWS),Insert + Minus (on the numpad) routes the JAWS cursor to the PC cursor location.
+Desktop Screen Readers (JAWS),Insert + Plus (on the numpad) routes the PC cursor to the JAWS cursor location.
+Desktop Screen Readers (JAWS),To toggle the Screen Shade in JAWS (privacy mode) use Insert + Space followed by Print Screen.
+Desktop Screen Readers (JAWS),Insert + Space followed by O then D performs OCR on the current document or image.
+Desktop Screen Readers (JAWS),To switch between open applications with JAWS speech support use Alt + Tab.
+Desktop Screen Readers (JAWS),Insert + T reads the title of the current application window.
+Desktop Screen Readers (JAWS),Insert + B reads the current window contents from top to bottom.
+Desktop Screen Readers (JAWS),To find text on a webpage within JAWS press Ctrl + F to open the JAWS Find dialog.
+Desktop Screen Readers (JAWS),Forms Mode in JAWS allows the user to type into input fields on web pages without triggering navigation shortcuts.
+Desktop Screen Readers (JAWS),Auto Forms Mode automatically enables typing when you tab onto an edit field.
+Desktop Screen Readers (JAWS),Insert + Z toggles the Virtual PC Cursor on and off.
+Desktop Screen Readers (JAWS),To read the current time in JAWS press Insert + F12.
+Desktop Screen Readers (JAWS),Pressing Insert + F12 twice quickly will read the current date.
+Desktop Screen Readers (JAWS),JAWS Research It allows users to quickly look up stock quotes or weather using Insert + Space followed by R.
+Desktop Screen Readers (JAWS),Text Analyzer in JAWS helps identify font changes and inconsistencies in documents.
+Desktop Screen Readers (JAWS),Insert + Space followed by H opens the Speech History window to review what was just spoken.
+Desktop Screen Readers (JAWS),To pass a key through to the application without JAWS intercepting it press Insert + 3.
+Desktop Screen Readers (JAWS),Table navigation in JAWS uses Alt + Ctrl + Arrow Keys to move between cells.
+Desktop Screen Readers (JAWS),Insert + C reads the word in context or the current column in a list view.
+Desktop Screen Readers (JAWS),Insert + 5 (numpad) reads the current character spoken phonetically if pressed twice.
+Desktop Screen Readers (NVDA),To quit NVDA completely press NVDA + Q.
+Desktop Screen Readers (NVDA),The Elements List in NVDA which shows links and headings is accessed via NVDA + F7.
+Desktop Screen Readers (NVDA),Input Help mode which announces the function of any key pressed is toggled with NVDA + 1.
+Desktop Screen Readers (NVDA),NVDA + Up Arrow reads the current line of text.
+Desktop Screen Readers (NVDA),To read the current window title in NVDA press NVDA + T.
+Desktop Screen Readers (NVDA),NVDA + F12 allows you to hear the time.
+Desktop Screen Readers (NVDA),Pressing NVDA + F12 twice quickly speaks the date.
+Desktop Screen Readers (NVDA),To toggle the Speech Viewer window which displays spoken text visually use the NVDA Tools menu.
+Desktop Screen Readers (NVDA),The NVDA modifier key can be set to Insert Caps Lock or both.
+Desktop Screen Readers (NVDA),NVDA + Ctrl + S opens the synthesizer selector to change voices.
+Desktop Screen Readers (NVDA),Object Navigation in NVDA allows users to inspect the operating system structure independent of the system focus.
+Desktop Screen Readers (NVDA),NVDA + N opens the main NVDA menu.
+Desktop Screen Readers (NVDA),Browse Mode is used by NVDA for reading complex documents like web pages.
+Desktop Screen Readers (NVDA),Focus Mode in NVDA directs keyboard input to the application such as a text field.
+Desktop Screen Readers (NVDA),NVDA + Spacebar toggles between Focus Mode and Browse Mode manually.
+Desktop Screen Readers (NVDA),To read the battery status on a laptop with NVDA press NVDA + Shift + B.
+Desktop Screen Readers (NVDA),NVDA + P toggles the reading of punctuation symbols levels.
+Desktop Screen Readers (NVDA),To toggle mouse tracking where NVDA reads what is under the mouse press NVDA + M.
+Desktop Screen Readers (NVDA),The Review Cursor allows you to review text without moving the system insertion point.
+Desktop Screen Readers (NVDA),NVDA + Shift + S toggles speech mode between Speech Beeps and Off.
+Desktop Screen Readers (NVDA),To copy the text currently being reviewed to the clipboard press NVDA + F10.
+Desktop Screen Readers (NVDA),NVDA + U toggles the reporting of progress bar updates.
+Desktop Screen Readers (NVDA),NVDA supports add-ons which can be installed to extend functionality like remote support.
+Desktop Screen Readers (NVDA),Screen Curtain for NVDA is typically achieved via a third-party add-on to darken the screen.
+Desktop Screen Readers (NVDA),NVDA + 5 (numpad) reads the current word.
+Desktop Screen Readers (NVDA),NVDA + 5 (numpad) pressed twice spells the current word.
+Desktop Screen Readers (NVDA),Pressing NVDA + Tab reports the current focus object.
+Desktop Screen Readers (NVDA),To find text in the current document in NVDA press NVDA + Control + F.
+Desktop Screen Readers (NVDA),NVDA + Shift + Up Arrow reads the currently selected text.
+Desktop Screen Readers (NVDA),To read the entire document from the current position press NVDA + Down Arrow.
+Desktop Screen Readers (Windows Narrator),To start Narrator in Windows press Control + Windows Key + Enter.
+Desktop Screen Readers (Windows Narrator),Narrator uses the Caps Lock or Insert key as the Narrator key.
+Desktop Screen Readers (Windows Narrator),Caps Lock + Spacebar toggles Scan Mode in Narrator.
+Desktop Screen Readers (Windows Narrator),Caps Lock + Esc exits Narrator.
+Desktop Screen Readers (Windows Narrator),To read the current item in Narrator press Caps Lock + Tab.
+Desktop Screen Readers (Windows Narrator),Caps Lock + Ctrl + U reads the next page in Narrator.
+Desktop Screen Readers (Windows Narrator),Caps Lock + Ctrl + I reads the current paragraph.
+Desktop Screen Readers (Windows Narrator),To stop Narrator from reading continuously press the Control key.
+Desktop Screen Readers (Windows Narrator),Caps Lock + F1 opens the command list for Narrator.
+Desktop Screen Readers (Windows Narrator),In Scan Mode pressing H moves to the next heading.
+Desktop Screen Readers (Windows Narrator),In Scan Mode pressing K moves to the next link.
+Desktop Screen Readers (Windows Narrator),To toggle the Narrator cursor highlighting visually press Caps Lock + F11.
+Desktop Screen Readers (Windows Narrator),Narrator + V decreases the volume of the voice.
+Desktop Screen Readers (Windows Narrator),Narrator + P toggles whether Narrator reads pause intervals.
+Desktop Screen Readers (Windows Narrator),Caps Lock + Right Arrow moves to the next item in the navigation flow.
+Desktop Screen Readers (Windows Narrator),To read the window title in Narrator press Caps Lock + T.
+Desktop Screen Readers (Windows Narrator),Narrator offers a Developer Mode to help test accessibility of apps.
+Desktop Screen Readers (Windows Narrator),To change the voice speed press Caps Lock + Plus or Caps Lock + Minus.
+Desktop Screen Readers (Windows Narrator),Caps Lock + Enter acts as a click or selection on the current item.
+Desktop Screen Readers (Windows Narrator),Scan Mode allows for navigation using just the arrow keys.
+Mobile Accessibility (iOS VoiceOver),To turn VoiceOver on or off use Siri and say Turn on VoiceOver.
+Mobile Accessibility (iOS VoiceOver),Triple-clicking the Side Button (or Home Button) can toggle VoiceOver if configured in Accessibility Shortcuts.
+Mobile Accessibility (iOS VoiceOver),A two-finger single tap is called the Magic Tap and acts as a play/pause button for media.
+Mobile Accessibility (iOS VoiceOver),To stop VoiceOver from speaking immediately perform a two-finger single tap.
+Mobile Accessibility (iOS VoiceOver),A three-finger triple tap toggles the Screen Curtain to darken the screen for privacy.
+Mobile Accessibility (iOS VoiceOver),Swipe right with one finger to move to the next accessible item on the screen.
+Mobile Accessibility (iOS VoiceOver),Swipe left with one finger to move to the previous accessible item.
+Mobile Accessibility (iOS VoiceOver),Double-tap with one finger to activate the selected item.
+Mobile Accessibility (iOS VoiceOver),To read the entire screen from the top swipe up with two fingers.
+Mobile Accessibility (iOS VoiceOver),To read from the current position swipe down with two fingers.
+Mobile Accessibility (iOS VoiceOver),Use the Rotor by rotating two fingers on the screen to change navigation settings.
+Mobile Accessibility (iOS VoiceOver),Swipe up or down with one finger to adjust the value of the selected Rotor setting.
+Mobile Accessibility (iOS VoiceOver),A three-finger swipe left or right changes pages on the Home Screen.
+Mobile Accessibility (iOS VoiceOver),A three-finger swipe up simulates scrolling down a list.
+Mobile Accessibility (iOS VoiceOver),A three-finger swipe down simulates scrolling up a list.
+Mobile Accessibility (iOS VoiceOver),To go Home swipe up from the bottom edge until you feel a vibration or hear a tone (on FaceID phones).
+Mobile Accessibility (iOS VoiceOver),To access the App Switcher swipe up from the bottom and hold until a second vibration is felt.
+Mobile Accessibility (iOS VoiceOver),To access Control Center tap the status bar and swipe up with three fingers.
+Mobile Accessibility (iOS VoiceOver),To access Notification Center tap the status bar and swipe down with three fingers.
+Mobile Accessibility (iOS VoiceOver),A three-finger double tap toggles speech mute without disabling VoiceOver.
+Mobile Accessibility (iOS VoiceOver),A two-finger double tap and hold allows you to label an unlabeled element.
+Mobile Accessibility (iOS VoiceOver),Use the Item Chooser to find an app by name by triple-tapping with two fingers.
+Mobile Accessibility (iOS VoiceOver),Typing Mode can be set to Standard Typing Touch Typing or Direct Touch Typing.
+Mobile Accessibility (iOS VoiceOver),In Touch Typing mode you find the key and lift your finger to enter it.
+Mobile Accessibility (iOS VoiceOver),VoiceOver Recognition can attempt to describe images that lack alt text.
+Mobile Accessibility (iOS VoiceOver),Screen Recognition uses AI to detect UI elements in apps that are not natively accessible.
+Mobile Accessibility (iOS VoiceOver),To move an app on the home screen use the Actions rotor option after selecting the app.
+Mobile Accessibility (iOS VoiceOver),A four-finger single tap near the top of the screen moves to the first element.
+Mobile Accessibility (iOS VoiceOver),A four-finger single tap near the bottom of the screen moves to the last element.
+Mobile Accessibility (iOS VoiceOver),The VoiceOver practice area allows you to practice gestures without affecting the phone settings.
+Mobile Accessibility (Android TalkBack),To turn on TalkBack you can often hold both volume keys for 3 seconds.
+Mobile Accessibility (Android TalkBack),The TalkBack menu is accessed by a three-finger tap or an L-shaped gesture (swipe down then right).
+Mobile Accessibility (Android TalkBack),To silence TalkBack speech tap the screen with two fingers once.
+Mobile Accessibility (Android TalkBack),Swipe right with one finger to move focus to the next item.
+Mobile Accessibility (Android TalkBack),Swipe left with one finger to move focus to the previous item.
+Mobile Accessibility (Android TalkBack),Double-tap anywhere on the screen to activate the focused item.
+Mobile Accessibility (Android TalkBack),Use two fingers to scroll up or down in a list.
+Mobile Accessibility (Android TalkBack),To go to the Home screen swipe up from the bottom and release (on gesture nav).
+Mobile Accessibility (Android TalkBack),To access Recent Apps swipe up from the bottom and hold (on gesture nav).
+Mobile Accessibility (Android TalkBack),To adjust the volume of the media slider specifically interact with the volume keys while TalkBack is speaking.
+Mobile Accessibility (Android TalkBack),Reading controls (granularity) are accessed by swiping up or down with one finger.
+Mobile Accessibility (Android TalkBack),To read from the top open the TalkBack menu and select Read from top.
+Mobile Accessibility (Android TalkBack),To read from the next item open the TalkBack menu and select Read from next item.
+Mobile Accessibility (Android TalkBack),Pass-through gestures allow you to use standard Android gestures while TalkBack is on.
+Mobile Accessibility (Android TalkBack),TalkBack supports a braille keyboard that allows typing directly on the screen.
+Mobile Accessibility (Android TalkBack),You can hide the screen for privacy by selecting Hide Screen in the TalkBack menu.
+Mobile Accessibility (Android TalkBack),Continuous reading is paused by tapping the screen.
+Mobile Accessibility (Android TalkBack),Use three fingers to swipe left or right to cycle through Reading Control options like headings or links.
+Mobile Accessibility (Android TalkBack),To copy the last spoken phrase to the clipboard double-tap with three fingers.
+Mobile Accessibility (Android TalkBack),To perform a long-press action double-tap and hold with one finger.
+Mobile Accessibility (Android TalkBack),Explore by Touch allows you to drag a finger around the screen to hear what is under it.
+Mobile Accessibility (Android TalkBack),Image description in TalkBack can be enabled in settings to describe icons and photos.
+Mobile Accessibility (Android TalkBack),To open the Notification Shade swipe down from the top with two fingers.
+Mobile Accessibility (Android TalkBack),Double-tap with four fingers to toggle the TalkBack tutorial.
+Mobile Accessibility (Android TalkBack),Use a single-finger swipe right then left to simulate the Back button action.
+Mobile Accessibility (Android TalkBack),Use a single-finger swipe left then right to open the Recent Apps overview (button navigation).
+Mobile Accessibility (Android TalkBack),Typing on the on-screen keyboard usually involves dragging to the letter and lifting the finger to select.
+Mobile Accessibility (Android TalkBack),TalkBack settings allows customization of gesture assignments.
+Mobile Accessibility (Android TalkBack),Custom labels can be added to unlabeled buttons via the TalkBack menu.
+Mobile Accessibility (Android TalkBack),Use voice commands by swiping right then up and saying a command like Read faster.
+Mac Accessibility (VoiceOver),Command + F5 toggles VoiceOver on macOS.
+Mac Accessibility (VoiceOver),The VoiceOver keys (VO keys) are Control + Option.
+Mac Accessibility (VoiceOver),VO + K starts the VoiceOver Keyboard Help mode.
+Mac Accessibility (VoiceOver),VO + A starts reading continuously from the current cursor position.
+Mac Accessibility (VoiceOver),VO + B starts reading from the top of the window.
+Mac Accessibility (VoiceOver),VO + D opens the Dock.
+Mac Accessibility (VoiceOver),VO + M opens the menu bar for the current application.
+Mac Accessibility (VoiceOver),VO + Right Arrow moves to the next item.
+Mac Accessibility (VoiceOver),VO + Left Arrow moves to the previous item.
+Mac Accessibility (VoiceOver),VO + Spacebar performs a click or activates the selected item.
+Mac Accessibility (VoiceOver),Interacting with a group (drilling down) is done by pressing VO + Shift + Down Arrow.
+Mac Accessibility (VoiceOver),Stop interacting with a group (moving up a level) is done by pressing VO + Shift + Up Arrow.
+Mac Accessibility (VoiceOver),VO + U opens the Rotor (Web Spots headings etc).
+Mac Accessibility (VoiceOver),The Trackpad Commander allows you to use iOS-style gestures on the Mac trackpad.
+Mac Accessibility (VoiceOver),Rotate two fingers on the trackpad to use the Rotor when Trackpad Commander is on.
+Mac Accessibility (VoiceOver),VO + F8 opens the VoiceOver Utility settings window.
+Mac Accessibility (VoiceOver),VO + Command + F8 toggles Quick Nav (using arrow keys without VO modifiers).
+Mac Accessibility (VoiceOver),Pressing the Control key silences VoiceOver speech.
+Mac Accessibility (VoiceOver),VO + H opens the VoiceOver Help menu.
+Mac Accessibility (VoiceOver),VO + Shift + M opens the Context Menu (right-click).
+Mac Accessibility (VoiceOver),VO + Home moves to the top of the document.
+Mac Accessibility (VoiceOver),VO + End moves to the bottom of the document.
+Mac Accessibility (VoiceOver),Navigation in macOS is hierarchical meaning you often must interact with a toolbar to see the buttons inside it.
+Mac Accessibility (VoiceOver),Screen Curtain on macOS is toggled via VO + Shift + Fn + F11.
+Mac Accessibility (VoiceOver),VO + Command + Shift + Spacebar simulates a mouse click at the VoiceOver cursor location.
+Mac Accessibility (VoiceOver),NumPad Commander allows controlling VoiceOver using the numeric keypad.
+Mac Accessibility (VoiceOver),VO + T reads the text attribute information under the cursor.
+Mac Accessibility (VoiceOver),VO + I opens the Item Chooser to search for items in the window.
+Mac Accessibility (VoiceOver),Quick Nav allows you to navigate the web by single letters like H for heading.
+Mac Accessibility (VoiceOver),VO + F3 describes the item currently under the mouse pointer.
+Magnification (ZoomText),Caps Lock + C toggles color enhancements in ZoomText.
+Magnification (ZoomText),Caps Lock + P toggles pointer enhancements.
+Magnification (ZoomText),Caps Lock + Enter toggles the magnification on and off.
+Magnification (ZoomText),Caps Lock + Up Arrow increases the magnification level.
+Magnification (ZoomText),Caps Lock + Down Arrow decreases the magnification level.
+Magnification (ZoomText),AppReader allows you to click on a document and have ZoomText read it to you.
+Magnification (ZoomText),The Background Reader feature allows you to copy text and listen to it while doing other tasks.
+Magnification (ZoomText),Caps Lock + C pressed repeatedly cycles through different color schemes.
+Magnification (ZoomText),ZoomText supports multiple monitor setups including Span and Clone modes.
+Magnification (ZoomText),The Finder feature (Caps Lock + Ctrl + F) helps you search for text and list headers on a page.
+Magnification (Windows Magnifier),Windows Key + Plus turns on Magnifier and zooms in.
+Magnification (Windows Magnifier),Windows Key + Minus zooms out.
+Magnification (Windows Magnifier),Windows Key + Esc closes Windows Magnifier.
+Magnification (Windows Magnifier),Ctrl + Alt + F switches to Full Screen mode.
+Magnification (Windows Magnifier),Ctrl + Alt + L switches to Lens mode (a moving magnifying glass).
+Magnification (Windows Magnifier),Ctrl + Alt + D switches to Docked mode.
+Magnification (Windows Magnifier),Ctrl + Alt + I inverts colors within the magnifier.
+Magnification (Windows Magnifier),You can adjust the zoom increment in Settings to jump by smaller amounts like 10% instead of 100%.
+Magnification (Windows Magnifier),Magnifier can follow the mouse pointer keyboard focus or text insertion point.
+Magnification (iOS Zoom),Double-tap with three fingers to toggle Zoom on iOS.
+Magnification (iOS Zoom),Drag with three fingers to move around the screen while zoomed in.
+Magnification (iOS Zoom),Double-tap with three fingers and drag up or down to adjust zoom level.
+Magnification (iOS Zoom),The Zoom Controller is a floating button that allows for quick zoom adjustments.
+Magnification (iOS Zoom),Window Zoom on iOS magnifies only a rectangular portion of the screen.
+Magnification (iOS Zoom),Zoom Filters can apply Grayscale or Inverted colors specifically to the zoom window.
+Magnification (iOS Zoom),Follow Focus allows the Zoom window to follow the text cursor while typing.
+Magnification (Android Magnification),Accessibility shortcut for magnification is often a triple-tap on the screen (if enabled).
+Magnification (Android Magnification),Pinch with two fingers to adjust the zoom level.
+Magnification (Android Magnification),Drag with two fingers to pan across the zoomed screen.
+Magnification (Android Magnification),Temporary magnification works by triple-tapping and holding the third tap to look briefly.
+Braille Technology,UEB stands for Unified English Braille the standard code for English speaking nations.
+Braille Technology,Nemeth Code is a specialized braille code used for mathematics and science notation.
+Braille Technology,A Refreshable Braille Display connects to computers or phones to display text in tactile dots.
+Braille Technology,Perkins-style entry uses six keys (S D F J K L) to represent dots 1 through 6.
+Braille Technology,Dot 1 is the top left dot in a braille cell.
+Braille Technology,Dot 4 is the top right dot in a braille cell.
+Braille Technology,The letter A is represented by Dot 1.
+Braille Technology,The letter C is represented by Dots 1 and 4.
+Braille Technology,Grade 1 Braille is uncontracted letter-for-letter spelling.
+Braille Technology,Grade 2 Braille includes contractions like "the" "and" and "for" to save space.
+Braille Technology,Cursor Routing buttons are located above each cell on a display to move the cursor to that specific character.
+Braille Technology,Panning buttons are used to scroll the braille display to the next section of text.
+Braille Technology,The Focus Blue is a popular line of braille displays manufactured by Vispero.
+Braille Technology,The Brailliant BI is a line of braille displays manufactured by HumanWare.
+Braille Technology,The Orbit Reader 20 is a low-cost braille display that uses a slower refresh mechanism to reduce price.
+Braille Technology,Computer Braille Code is an 8-dot code used to represent exact computer characters.
+Braille Technology,Dot 7 is the bottom left dot in an 8-dot braille cell.
+Braille Technology,Dot 8 is the bottom right dot in an 8-dot braille cell.
+Braille Technology,LibLouis is an open-source braille translator used by NVDA and other screen readers.
+Braille Technology,Braille Screen Input on iOS allows you to calibrate dot positions based on where your fingers land.
+Braille Technology,In Braille Screen Input swiping right adds a space.
+Braille Technology,In Braille Screen Input swiping left deletes the last character.
+Braille Technology,A slate and stylus is a low-tech method for writing braille by punching dots into paper manually.
+Braille Technology,Writing with a slate and stylus is done from right to left (mirror image).
+Braille Technology,Reading braille is done from left to right.
+Braille Technology,Braille embossers are printers that hammer dots into heavy paper.
+Braille Technology,Tactile graphics allow blind users to feel charts and maps using raised lines.
+Braille Technology,The Chameleon 20 is a braille display that includes internal intelligence for note-taking.
+Braille Technology,HID Braille allows displays to work over USB without installing specific drivers on modern systems.
+Braille Technology,The numeric indicator (Dots 3-4-5-6) indicates that the following characters are numbers in standard literary braille.
+Specialized Apps,Seeing AI is a Microsoft app primarily designed for iOS users.
+Specialized Apps,The Short Text channel in Seeing AI reads text as soon as it appears in the camera frame.
+Specialized Apps,The Document channel in Seeing AI requires you to take a photo and provides audio guidance to align edges.
+Specialized Apps,Seeing AI's Person channel can recognize saved faces and announce their names.
+Specialized Apps,The Currency channel in Seeing AI identifies bank notes from various countries.
+Specialized Apps,The Scene channel in Seeing AI provides a general description of the photo captured.
+Specialized Apps,The Color channel in Seeing AI identifies the color of the object in the center of the frame.
+Specialized Apps,The Light channel in Seeing AI plays a higher pitch tone as the environment gets brighter.
+Specialized Apps,Be My Eyes connects blind users to sighted volunteers via video call.
+Specialized Apps,Be My Eyes Specialized Help connects users to customer support for companies like Google and Microsoft.
+Specialized Apps,Envision AI is an OCR app that handles handwriting recognition particularly well.
+Specialized Apps,Google Lookout is the primary camera-based assistance app for Android.
+Specialized Apps,Lookout's Food Label mode scans barcodes to identify packaged grocery items.
+Specialized Apps,Lookout's Documents mode helps scan full pages of text on Android.
+Specialized Apps,BlindSquare is a GPS app that announces points of interest and intersections.
+Specialized Apps,Lazarillo is a GPS app that focuses on accessible routing and indoor navigation in some venues.
+Specialized Apps,Soundscape (and its community successors) uses 3D audio to place sounds virtually in space for navigation.
+Specialized Apps,Cash Reader is an app dedicated specifically to identifying currency from many countries.
+Specialized Apps,Voice Dream Reader is a popular text-to-speech app for reading eBooks and PDFs.
+Specialized Apps,Bard Mobile allows users to download audiobooks from the NLS Braille and Audio Reading Download service.
+Specialized Apps,Dolphin EasyReader is an accessible reading app for dyslexia and low vision.
+Specialized Apps,Sullivan+ is a visual aid app providing AI recognition features similar to Seeing AI.
+Specialized Apps,TapTapSee allows users to take a photo and get a description after a short processing delay.
+Specialized Apps,Aira provides on-demand access to professional visual interpreters for a subscription fee.
+Specialized Apps,NaviLens uses colorful QR-style codes to provide long-distance signage reading.
+Specialized Apps,Microsoft Soundscape allows you to set an audio beacon on a destination.
+Specialized Apps,GoodMaps requires LiDAR scanning in some venues to provide indoor navigation.
+Specialized Apps,WalkyTalky provides periodic updates on your current street location while walking.
+Specialized Apps,Moovit is often used by blind travelers for accessible public transit planning.
+Specialized Apps,Transit app works well with VoiceOver to show bus arrival times.
+Web Navigation,HTML Headings (H1 to H6) allow screen reader users to jump through sections of a page.
+Web Navigation,The H key acts as the shortcut for Headings in most major screen readers (JAWS NVDA VoiceOver).
+Web Navigation,HTML Lists (ul and ol) tell screen reader users how many items are in a group.
+Web Navigation,Alt text (alternative text) provides a written description of images for screen readers.
+Web Navigation,ARIA Landmarks (like Banner Main Contentinfo) define regions of a page for quick navigation.
+Web Navigation,The D key often moves to the next Landmark in desktop screen readers.
+Web Navigation,Skip to Content links allow keyboard users to bypass navigation menus.
+Web Navigation,Tables should have column headers (th) defined so screen readers can associate data cells with headers.
+Web Navigation,T is the shortcut key to jump to the next table in JAWS and NVDA.
+Web Navigation,Captions are required for video accessibility for deaf-blind users relying on braille.
+Web Navigation,Form labels must be programmatically associated with their input fields using the 'for' and 'id' attributes.
+Web Navigation,F is the shortcut key to jump to the next form field in JAWS and NVDA.
+Web Navigation,B is the shortcut key to jump to the next button.
+Web Navigation,Screen readers often say "visited link" to indicate a URL the user has been to before.
+Web Navigation,Links should have descriptive text (avoid "click here") for better context when navigating by link list.
+Web Navigation,A logical tab order ensures keyboard users navigate the page in a sequence that makes sense.
+Web Navigation,Focus visible indicators are essential for low vision users navigating with a keyboard.
+Web Navigation,Dynamic content updates (like new emails appearing) should be announced using ARIA live regions.
+Web Navigation,Automatic playing audio on a website interferes with screen reader speech.
+Web Navigation,Keyboard traps occur when a user tabs into a widget and cannot tab out of it.
+Web Navigation,Contrast ratio of 4.5:1 is the standard requirement for normal text in WCAG AA.
+Web Navigation,Accessibility overlays often interfere with native screen reader navigation and are generally discouraged.
+Web Navigation,Combo boxes allow users to select from a dropdown list or type a value.
+Web Navigation,The Application Role in ARIA switches screen readers from browse mode to focus mode.
+Web Navigation,Headings should follow a logical hierarchy (H1 followed by H2) without skipping levels.
+Web Navigation,Link Lists allows users to pull up all links on a page (Insert + F7 in JAWS).
+Web Navigation,Iframe titles help screen reader users understand the content of embedded frames.
+Web Navigation,Placeholder text in forms is not a substitute for a visual or programmatic label.
+Web Navigation,Time limits on websites should be adjustable for users who need more time to interact.
+Web Navigation,Responsive design aids low vision users by allowing text to reflow when zoomed in.
+Hardware & Daily Living,A white cane is the primary mobility tool for many blind individuals.
+Hardware & Daily Living,A rolling tip (marshmallow or ball) allows the cane to slide constantly along the ground.
+Hardware & Daily Living,Two-point touch is a cane technique where the user taps left and right in an arc.
+Hardware & Daily Living,Shorelining involves following a distinct edge (grass line or wall) with a cane.
+Hardware & Daily Living,A liquid level indicator beeps or vibrates when a cup is nearly full to prevent spills.
+Hardware & Daily Living,Color identifiers are small devices that speak the color of the object they are touched to.
+Hardware & Daily Living,Braille labelers allow users to create sticky dymo-tape labels in braille.
+Hardware & Daily Living,PenFriend is a voice labeling system that uses stickers with micro-codes to play back recorded audio.
+Hardware & Daily Living,Talking watches press a button to announce the time audibly.
+Hardware & Daily Living,Tactile dots (bump dots) are often placed on microwave buttons to mark commonly used settings.
+Hardware & Daily Living,A guide dog is trained to stop at curbs and avoid obstacles.
+Hardware & Daily Living,Intelligent disobedience is when a guide dog refuses a command that would put the handler in danger.
+Hardware & Daily Living,A talking scale announces weight audibly for health tracking.
+Hardware & Daily Living,Talking calculators are used for math when braille or mental math is not efficient.
+Hardware & Daily Living,Large print keyboards feature high contrast yellow keys with black letters.
+Hardware & Daily Living,Bone conduction headphones allow users to hear screen reader audio while keeping ears open to environmental sounds.
+Hardware & Daily Living,Accessible prescription labels (ScriptTalk) use RFID to read medication instructions aloud.
+Hardware & Daily Living,A money template is a plastic card used to identify bill denominations by size (mostly outside the US).
+Hardware & Daily Living,US Currency is historically difficult to identify tactually without an app or device.
+Hardware & Daily Living,Digital talking book players are hardware devices specifically for playing NLS books.
+Hardware & Daily Living,Victor Reader Stream is a handheld media player for blind users with tactile buttons.
+Hardware & Daily Living,A signature guide is a plastic card with a cutout to help a blind person sign on the line.
+Hardware & Daily Living,Sock sorters are small clips used to keep pairs of socks together in the wash.
+Hardware & Daily Living,A talking thermometer is used for checking fever or cooking temperatures.
+Hardware & Daily Living,Audio description (AD) is a secondary audio track in movies that describes visual action.
+Hardware & Daily Living,Netflix and other streamers allow toggling Audio Description in the language settings.
+Hardware & Daily Living,Smart speakers (Alexa/Google Home) are widely used for hands-free access to information.
+Hardware & Daily Living,OCR stands for Optical Character Recognition the technology used to read text from images.
+Hardware & Daily Living,TTS stands for Text-to-Speech the synthesized voice used by screen readers.
+Hardware & Daily Living,Haptic feedback uses vibrations to convey information to the user.
