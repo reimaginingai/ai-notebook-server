@@ -4,15 +4,11 @@ Simple server to interface with our AI Notebook Model
 
 ## Installation
 
+### Local
 1. Clone the repository `git clone https://github.com/daniel-theunissen/ai-notebook-server.git`
 2. Install dependencies in a new virtual environment
 ```
-pip install pandas
-pip install numpy
-pip install flask
-pip install pipenv
-pip install python-dotenv
-pip install openai
+pip install -r requirements.txt
 ```
 3. Install PyTorch for your platform
 
@@ -24,13 +20,46 @@ pip install "transformers[torch]"
 pip install -U sentence-transformers
 ```
 
+5. Set your environment variables
+```
+PRIVATE_KEY={your firebase database key}
+```
+
+### Docker
+1. Log into ghcr 
+```
+docker login ghcr.io -u <USERNAME> -p <PERSONAL_ACCESS_TOKEN>
+```
+
+2. Pull the container
+```
+docker pull ghcr.io/daniel-theunissen/notebook-ai-api
+```
+
+3. Create `.env` containing:
+```
+PRIVATE_KEY={your firebase database key}
+``` 
 
 ## Usage
+
+### Local
 
 Start the server using `./start_server.sh`
 
 The server should be hosted locally on port 5000
 
-Store a new note using `./add_note "<note>"`
+Use the provided shell scripts to test the endpoints.
 
-Query the database using `./ask_question "<question>"`
+### Docker
+
+Start the server by running the container:
+
+```
+docker run -d \
+    --name notebook-ai-api \
+    -p 5000:5000 \
+    --gpus all \
+    --env-file .env \
+    ghcr.io/daniel-theunissen/notebook-ai-api
+```

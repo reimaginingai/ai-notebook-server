@@ -1,80 +1,67 @@
-from sentence_transformers import SentenceTransformer
-import torch
-import pandas as pd
+from sentence_transformers import SentenceTransformer, CrossEncoder
 import numpy as np
-import os
-import csv
+import torch
 
 # Choose sentence transformer (biencoder) model
-model = SentenceTransformer("multi-qa-mpnet-base-dot-v1")
+biencoder_model = SentenceTransformer("all-mpnet-base-v2")
+# Choose a cross-encoder model
+cross_encoder_model = CrossEncoder('cross-encoder/ms-marco-MiniLM-L6-v2')
 
-def add_note(note):
+def encode_sentence(sentence):
     """
-    Adds a new note to the database
+    Encodes a sentence based on a model definition
 
     Args:
-        note (str): String containing the note
+        sentence (str): String containing the sentence to be encoded
 
     Returns:
-        none
+        embedding (list): List containing embedding data
     """
+    # Calculate embedding for sentence
+    embedding = biencoder_model.encode([sentence]).tolist()  # Convert to list for Firebase compatibility
 
-    # Save text to database
-    with open(r'database.csv','a') as fd:
-                  writer = csv.writer(fd)
-                  writer.writerow([note])
+    return embedding
 
-    # Calculate embedding for note
-    note_embedding = model.encode([note])
 
-    # Create database if it doesn't exist
-    if not os.path.exists("database.pt"):
-        torch.save(note_embedding, "database.pt")
-        return
+def get_encoding_similarities(question_embedding, note_embeddings):
+    """
+    Get the list of similarity scores given the question and note embeddings
+
+    Args:
+        question_embedding (list): List containing the question embedding data
+        note_embeddings (list): List containing the note embedding data
+
+    Returns:
+        similarities (Tensor): List containing the similarity scores 
+    """
+    note_embeddings = np.array(note_embeddings, dtype=np.float32)
+    note_embeddings = note_embeddings.reshape(note_embeddings.shape[0], -1)  # Reshape to (n, 768)
+
+    
+    # Calculate similarities
+    similarities = biencoder_model.similarity(question_embedding, note_embeddings)
+    
+    
+    return similarities
+
+def get_cross_encoder_similarities(query, memos):
+    """
+    Run the cross encoder on a query and a set of memos, outputting a similarity to the query score for each memo.
+
+    Args:
+        query (str): The query to be compared with each memo.
+        memos (list of str): Each memo to be compared with the query.
+
+    Returns:
+        (numpy.ndarray) The similarity to query score for each memo. (1 x num_memos)
+    """
+    scores = cross_encoder_model.predict([(query, memo) for memo in memos])
+    return scores
+
+def get_top_k_indices(similarities, k):
+    # Get the top k most similar answers
+    top_values, top_indices = torch.topk(similarities, k)
+    return top_indices, top_values
+
         
-    else:
-        # Add new note to database and save
-        database = torch.load("database.pt", weights_only=False)
-        database = np.concatenate((database, note_embedding), axis=0)
-        torch.save(database, "database.pt")
-        return
-    
-def sync_database(notes):
-    """
-    Syncs database with the client's notes
 
-    Args:
-        notes (list): A list of notes
-    
-    Returns:
-        none
-    """
-    os.system('./reset_database.sh')
-    for note in notes:
-        add_note(note)
-    return
-    
-def get_response(question):
-    """
-    Get the closest match in the database to a question
-
-    Args:
-        question (str): String containing the question
-
-    Returns:
-        answer (str): String containing the answer 
-    """
-
-    # Calculate quesiton embedding
-    question_embedding = model.encode([question])
-
-    # Load database and compare using dot product similarity
-    database = torch.load("database.pt", weights_only=False)
-    similarities = model.similarity(question_embedding, database)
-
-    # Find closest match in the database
-    max_val, max_idx = similarities.max(1)
-    answer_db = pd.read_csv("database.csv")
-    answer_db = answer_db.reset_index()
-    answer = answer_db["Note"][max_idx.item()]
-    return answer

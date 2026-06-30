@@ -1,0 +1,300 @@
+Screen Readers,JAWS can list all links on a webpage in a dialog for quick navigation.
+Screen Readers,"NVDA provides single-letter navigation for headings, links, and form fields in browsers."
+Screen Readers,VoiceOver on macOS uses the rotor to change navigation modes without opening menus.
+Screen Readers,JAWS supports application-specific scripts to customize spoken output.
+Screen Readers,NVDA is open source and allows community-developed add-ons.
+Screen Readers,"Screen readers announce ARIA landmarks such as navigation, main, and complementary regions."
+Screen Readers,JAWS can read the system tray and running applications from a hotkey.
+Screen Readers,NVDA can report text formatting like bold and italics when enabled.
+Screen Readers,VoiceOver can interact with web controls using a virtual cursor separate from the system cursor.
+Screen Readers,Screen readers can present information through both speech and braille simultaneously.
+Screen Readers,JAWS supports braille displays for tactile output of on-screen text.
+Screen Readers,NVDA allows review of the screen independently of the current cursor position.
+Screen Readers,"VoiceOver can read by character, word, line, sentence, or paragraph."
+Screen Readers,JAWS can announce spelling errors in editable text fields.
+Screen Readers,NVDA includes a speech viewer for visual monitoring of spoken output.
+Screen Readers,Screen readers can announce form field labels and required status.
+Screen Readers,JAWS provides a help system that lists all available commands.
+Screen Readers,NVDA supports multiple speech synthesizers selectable by the user.
+Screen Readers,"VoiceOver can describe UI controls such as buttons, checkboxes, and sliders."
+Screen Readers,"Screen readers can expose document structure like tables, lists, and headings."
+Screen Readers,JAWS can track focus changes between windows and dialogs.
+Screen Readers,NVDA can read mathematical content using MathML support.
+Screen Readers,VoiceOver can interact with web apps using accessibility APIs.
+Screen Readers,Screen readers can announce live region updates on dynamic webpages.
+Screen Readers,JAWS can read PDF documents when they contain tagged text.
+Screen Readers,NVDA can present object navigation for inspecting UI elements.
+Screen Readers,VoiceOver supports braille input through connected displays.
+Screen Readers,Screen readers can announce error messages when form submission fails.
+Screen Readers,JAWS supports multiple languages through different speech engines.
+Screen Readers,NVDA can be run from a portable USB drive without installation.
+Magnification,ZoomText provides magnification up to very high levels while preserving text smoothing.
+Magnification,"Windows Magnifier offers full-screen, lens, and docked viewing modes."
+Magnification,macOS Zoom allows screen magnification via keyboard shortcuts or trackpad gestures.
+Magnification,High-contrast themes replace interface colors to improve text visibility.
+Magnification,Color inversion swaps light and dark areas to reduce glare for some users.
+Magnification,Cursor enlargement makes the mouse pointer easier to locate on screen.
+Magnification,Focus highlighting visually marks the currently selected control.
+Magnification,Magnification can follow keyboard focus rather than mouse position.
+Magnification,Text-only zoom increases font size without scaling images.
+Magnification,Smooth zoom transitions reduce disorientation compared to abrupt jumps.
+Magnification,Magnifiers can enhance edges to improve object distinction.
+Magnification,Multiple monitor setups can apply different zoom levels per display.
+Magnification,Magnification software can maintain aspect ratio to avoid distortion.
+Magnification,Crosshair overlays help track the center of the magnified area.
+Magnification,Magnifiers can lock onto the caret in text editors.
+Magnification,Some tools provide color filtering for specific vision conditions.
+Magnification,Magnification can be combined with screen reading for dual output.
+Magnification,Lens mode enlarges only a portion of the screen around the pointer.
+Magnification,Docked mode reserves part of the screen for a magnified view.
+Magnification,Zoom can be controlled with keyboard shortcuts for precise scaling.
+Magnification,Magnification can follow text input fields in forms automatically.
+Magnification,Pointer trails improve visibility of fast cursor movement.
+Magnification,Magnifiers can enhance contrast between foreground and background.
+Magnification,Per-app zoom settings allow different magnification for different programs.
+Magnification,Magnification can track the active window instead of the entire desktop.
+Magnification,Screen zoom can be limited to horizontal or vertical directions.
+Magnification,Magnifiers can provide color outlines around UI elements.
+Magnification,Magnification can be used in presentation mode for group viewing.
+Magnification,Some systems allow magnifying touch gestures on trackpads.
+Magnification,Magnifiers can reduce screen clutter by hiding non-essential elements.
+Braille,Refreshable braille displays use moving pins to form braille characters.
+Braille,A 40-cell braille display typically shows one line of text at a time.
+Braille,Braille displays connect to computers via USB or Bluetooth.
+Braille,Routing keys on braille displays move the cursor to a specific character.
+Braille,Braille displays present screen reader output in tactile form.
+Braille,Some braille displays include Perkins-style keyboards for input.
+Braille,Contracted braille shortens common words using abbreviations.
+Braille,Uncontracted braille spells out every word letter by letter.
+Braille,Braille notetakers allow writing and editing without a computer.
+Braille,Braille displays can pair with smartphones for mobile access.
+Braille,Braille output enables silent reading in public environments.
+Braille,Some displays support multiple braille tables for different languages.
+Braille,"Braille devices can navigate text by line, word, or character."
+Braille,Braille displays can show system notifications tactually.
+Braille,Braille input allows users to type directly into applications.
+Braille,Some devices support tactile graphics for simple diagrams.
+Braille,Braille displays can mirror the screen reader’s review cursor.
+Braille,Braille users can scroll text using navigation keys on the device.
+Braille,Braille displays can show formatting indicators such as capitalization.
+Braille,Some devices include onboard storage for notes and files.
+Braille,Braille displays can connect to both iOS and Android devices.
+Braille,Braille output supports proofreading by revealing spelling errors.
+Braille,Some braille devices include audio output as well as tactile output.
+Braille,Braille displays can present command prompts and menus.
+Braille,Braille displays allow line-by-line reading of documents.
+Braille,Some models are optimized for portability and battery life.
+Braille,Braille displays can be used in classrooms for accessible learning.
+Braille,Braille devices can integrate with screen readers like JAWS and NVDA.
+Braille,Braille displays support navigation of web content.
+Braille,Braille displays can present cursor position in editable text.
+Mobile Accessibility,VoiceOver on iOS uses gestures to navigate and activate interface elements.
+Mobile Accessibility,TalkBack on Android provides spoken feedback for touch interactions.
+Mobile Accessibility,iOS allows accessibility features to be toggled with a triple-click shortcut.
+Mobile Accessibility,Android includes an accessibility menu with large on-screen controls.
+Mobile Accessibility,VoiceOver’s screen curtain turns off the display while keeping audio active.
+Mobile Accessibility,Braille Screen Input lets users type braille directly on a touchscreen.
+Mobile Accessibility,VoiceOver announces notifications aloud when enabled.
+Mobile Accessibility,"TalkBack supports reading text by character, word, or line."
+Mobile Accessibility,VoiceOver’s rotor changes navigation modes such as headings or links.
+Mobile Accessibility,Android allows custom gestures to be assigned to accessibility actions.
+Mobile Accessibility,Mobile screen readers announce focused controls and their roles.
+Mobile Accessibility,VoiceOver can describe images when image descriptions are available.
+Mobile Accessibility,TalkBack provides spoken hints for performing gestures.
+Mobile Accessibility,Mobile devices support external braille displays via Bluetooth.
+Mobile Accessibility,VoiceOver can read text within third-party applications.
+Mobile Accessibility,Android accessibility includes magnification gestures for low vision.
+Mobile Accessibility,VoiceOver can navigate by form controls in web content.
+Mobile Accessibility,TalkBack can announce changes in screen content dynamically.
+Mobile Accessibility,Mobile accessibility supports dictation for text entry.
+Mobile Accessibility,VoiceOver can interact with maps using audio feedback.
+Mobile Accessibility,Android supports accessibility shortcuts from the navigation bar.
+Mobile Accessibility,VoiceOver can read email and message content aloud.
+Mobile Accessibility,TalkBack provides vibration feedback in addition to speech.
+Mobile Accessibility,Mobile accessibility features can be enabled during device setup.
+Mobile Accessibility,VoiceOver allows navigation by containers in complex apps.
+Mobile Accessibility,Android accessibility services can be extended by third-party apps.
+Mobile Accessibility,VoiceOver can present content in braille through paired devices.
+Mobile Accessibility,TalkBack supports keyboard navigation on connected keyboards.
+Mobile Accessibility,Mobile accessibility includes color inversion and contrast settings.
+Mobile Accessibility,VoiceOver can announce status changes such as battery level.
+Desktop Accessibility,Sticky Keys allow modifier keys to be pressed one at a time.
+Desktop Accessibility,High-contrast themes improve readability of system interfaces.
+Desktop Accessibility,Keyboard shortcuts reduce reliance on precise mouse movement.
+Desktop Accessibility,Screen readers announce window titles when switching applications.
+Desktop Accessibility,Focus indicators highlight the active control on screen.
+Desktop Accessibility,Operating systems allow system font sizes to be increased globally.
+Desktop Accessibility,On-screen keyboards provide text entry without physical keyboards.
+Desktop Accessibility,Audio cues can signal when dialogs or alerts appear.
+Desktop Accessibility,Caret browsing enables text navigation with arrow keys.
+Desktop Accessibility,Custom shortcut keys automate frequent accessibility actions.
+Desktop Accessibility,Desktop accessibility includes options for cursor size and color.
+Desktop Accessibility,Screen readers can announce menu structures in applications.
+Desktop Accessibility,Operating systems provide built-in dictation for text input.
+Desktop Accessibility,Desktop environments allow zooming into specific regions of the screen.
+Desktop Accessibility,Focus tracking can follow keyboard input across applications.
+Desktop Accessibility,Screen readers can read file explorer contents.
+Desktop Accessibility,Accessibility settings can be configured per user account.
+Desktop Accessibility,Desktop systems allow magnification to follow text input.
+Desktop Accessibility,Visual alerts can replace system sounds for notifications.
+Desktop Accessibility,Screen readers can announce tooltips and help text.
+Desktop Accessibility,Desktop accessibility includes support for alternative input devices.
+Desktop Accessibility,Keyboard navigation allows access to menus without a mouse.
+Desktop Accessibility,Accessibility APIs expose UI elements to assistive software.
+Desktop Accessibility,Desktop systems support color filters for vision conditions.
+Desktop Accessibility,Screen readers can announce changes in application state.
+Desktop Accessibility,Accessibility settings can be backed up and restored.
+Desktop Accessibility,Desktop accessibility includes options for reducing motion effects.
+Desktop Accessibility,Screen readers can interact with dialog boxes and pop-ups.
+Desktop Accessibility,Operating systems provide built-in accessibility troubleshooting tools.
+Desktop Accessibility,Desktop accessibility can be customized for individual applications.
+Navigation & Mobility,GPS navigation apps provide turn-by-turn audio directions for pedestrians.
+Navigation & Mobility,Some apps announce nearby intersections and street names.
+Navigation & Mobility,Indoor navigation systems often rely on Bluetooth beacons.
+Navigation & Mobility,"Audio beacons can mark entrances, elevators, or service desks."
+Navigation & Mobility,Computer vision can detect obstacles such as stairs or doors.
+Navigation & Mobility,Wayfinding apps announce points of interest aloud.
+Navigation & Mobility,Vibration cues can supplement spoken navigation instructions.
+Navigation & Mobility,Crowdsourced mapping improves accessibility data accuracy.
+Navigation & Mobility,Smart canes can detect obstacles using ultrasonic sensors.
+Navigation & Mobility,Wearable devices can provide spatial audio cues for orientation.
+Navigation & Mobility,Navigation apps can announce bus stops and transit stations.
+Navigation & Mobility,Some systems provide landmark-based navigation instructions.
+Navigation & Mobility,Indoor maps can guide users through large buildings.
+Navigation & Mobility,Navigation apps can announce approaching crosswalks.
+Navigation & Mobility,Some tools integrate with public transit schedules.
+Navigation & Mobility,Audio navigation can indicate direction using stereo sound.
+Navigation & Mobility,Haptic feedback can signal when to turn or stop.
+Navigation & Mobility,Navigation apps can announce nearby businesses or services.
+Navigation & Mobility,Some devices detect head-level obstacles for safety.
+Navigation & Mobility,GPS tools can announce current location on demand.
+Navigation & Mobility,Navigation systems can provide route previews before travel.
+Navigation & Mobility,Some apps allow users to record custom waypoints.
+Navigation & Mobility,Navigation aids can announce changes in elevation.
+Navigation & Mobility,Some systems provide crowd density information.
+Navigation & Mobility,Navigation tools can alert users when off-route.
+Navigation & Mobility,Indoor navigation can use Wi-Fi positioning.
+Navigation & Mobility,Some devices provide distance-to-target announcements.
+Navigation & Mobility,Navigation apps can integrate with smartwatches.
+Navigation & Mobility,Orientation tools can announce compass directions.
+Navigation & Mobility,Some aids provide obstacle alerts through bone-conduction audio.
+OCR & Reading,OCR converts images of text into machine-readable characters.
+OCR & Reading,Mobile OCR apps can read printed mail aloud using a phone camera.
+OCR & Reading,Batch scanning allows recognition of multiple pages at once.
+OCR & Reading,OCR accuracy improves with good lighting and flat documents.
+OCR & Reading,Some apps detect document structure such as columns and headings.
+OCR & Reading,Handwriting recognition is less reliable than printed text recognition.
+OCR & Reading,OCR can export recognized text to screen readers.
+OCR & Reading,Language detection allows OCR to read documents in multiple languages.
+OCR & Reading,Skew correction straightens images before recognition.
+OCR & Reading,Cloud-based OCR often provides higher accuracy than offline engines.
+OCR & Reading,OCR can identify text in photographs of signs.
+OCR & Reading,Some OCR tools can recognize currency denominations.
+OCR & Reading,OCR apps can read labels on packaged goods.
+OCR & Reading,Real-time OCR can announce text as the camera moves.
+OCR & Reading,Some apps can detect and read handwritten notes.
+OCR & Reading,OCR can convert scanned PDFs into searchable text.
+OCR & Reading,Text recognition can preserve basic formatting such as paragraphs.
+OCR & Reading,OCR tools can recognize text in multiple fonts.
+OCR & Reading,Some systems provide confidence scores for recognized text.
+OCR & Reading,OCR can export text to braille displays.
+OCR & Reading,OCR apps can read whiteboards or classroom materials.
+OCR & Reading,Some tools can detect orientation and rotate images automatically.
+OCR & Reading,OCR can identify text in low-contrast images.
+OCR & Reading,Some apps allow manual correction of recognition errors.
+OCR & Reading,OCR can process business cards into contact information.
+OCR & Reading,Some OCR tools support mathematical notation.
+OCR & Reading,OCR can recognize text in multiple scripts.
+OCR & Reading,Some systems can detect text in videos frame by frame.
+OCR & Reading,OCR can identify text in product labels.
+OCR & Reading,Some tools provide offline OCR for privacy.
+Voice Assistants,Voice assistants can set reminders using spoken commands.
+Voice Assistants,Users can ask assistants to read incoming messages aloud.
+Voice Assistants,Smart speakers support hands-free control of home devices.
+Voice Assistants,Voice assistants can answer general knowledge questions verbally.
+Voice Assistants,Speech recognition enables dictation of text messages.
+Voice Assistants,Privacy settings allow users to delete stored voice recordings.
+Voice Assistants,Custom routines automate multiple actions with one phrase.
+Voice Assistants,Assistants can control accessibility features through voice.
+Voice Assistants,Some assistants integrate with third-party accessibility apps.
+Voice Assistants,Offline voice commands are more limited than cloud-based ones.
+Voice Assistants,Voice assistants can place phone calls by contact name.
+Voice Assistants,Assistants can announce calendar events.
+Voice Assistants,Voice assistants can read news briefings aloud.
+Voice Assistants,Some assistants can identify music playing nearby.
+Voice Assistants,Assistants can control smart thermostats and lighting.
+Voice Assistants,Voice assistants can add items to shopping lists.
+Voice Assistants,Some assistants provide spoken navigation directions.
+Voice Assistants,Voice assistants can answer weather queries.
+Voice Assistants,Assistants can send dictated text messages.
+Voice Assistants,Voice assistants can manage alarms and timers.
+Voice Assistants,Some assistants can translate spoken language.
+Voice Assistants,Assistants can control media playback by voice.
+Voice Assistants,Voice assistants can announce incoming calls.
+Voice Assistants,Some systems support multiple user voice profiles.
+Voice Assistants,Assistants can integrate with calendar applications.
+Voice Assistants,Voice assistants can read emails aloud.
+Voice Assistants,Some assistants can provide step-by-step instructions.
+Voice Assistants,Assistants can control accessibility settings like screen readers.
+Voice Assistants,Voice assistants can respond to custom wake words.
+Voice Assistants,Some systems provide voice feedback for smart appliances.
+Hardware,Portable video magnifiers use cameras to enlarge printed text.
+Hardware,Braille notetakers combine a braille keyboard with speech output.
+Hardware,Talking GPS devices announce routes without a smartphone.
+Hardware,Smart glasses can provide audio descriptions of surroundings.
+Hardware,Handheld scanners can read labels and packaging aloud.
+Hardware,Tactile graphics displays can present simple diagrams.
+Hardware,Wearable sensors can detect obstacles at head height.
+Hardware,Audio labelers record voice tags for household items.
+Hardware,Digital voice recorders are used for quick note taking.
+Hardware,Foot pedals can provide hands-free control of software.
+Hardware,Braille embossers print tactile documents on paper.
+Hardware,Portable braille displays allow mobile text access.
+Hardware,Talking calculators provide audible computation results.
+Hardware,Smart canes can include GPS and obstacle detection.
+Hardware,Braille watches display time in tactile form.
+Hardware,Electronic magnifiers combine zoom and contrast enhancement.
+Hardware,Speech-enabled thermostats announce temperature settings.
+Hardware,Talking scales announce weight measurements.
+Hardware,Braille label makers produce tactile adhesive labels.
+Hardware,Audio thermometers announce temperature readings.
+Hardware,Braille keyboards allow direct braille input to computers.
+Hardware,Smart doorbells can announce visitors via audio.
+Hardware,Wearable cameras can provide real-time scene descriptions.
+Hardware,Talking blood glucose meters provide audible readings.
+Hardware,Braille tablets support tactile reading and writing.
+Hardware,Audio compasses announce cardinal directions.
+Hardware,Smartphone mounts stabilize cameras for OCR use.
+Hardware,Talking multimeters provide audible electrical measurements.
+Hardware,Portable note takers store and read back recorded audio.
+Hardware,Braille displays with touch sensors allow gesture input.
+Education & Training,Screen reader training teaches keyboard shortcuts for navigation.
+Education & Training,Braille literacy programs teach contracted and uncontracted braille.
+Education & Training,Technology workshops introduce new accessibility applications.
+Education & Training,Orientation and mobility training teaches safe travel techniques.
+Education & Training,Online tutorials provide self-paced learning for assistive software.
+Education & Training,Peer mentoring helps users share accessibility strategies.
+Education & Training,Certification programs train professionals in accessibility support.
+Education & Training,Practice exercises improve screen reader efficiency.
+Education & Training,Accessible documentation uses clear headings and structure.
+Education & Training,Continuing education keeps users informed about new tools.
+Education & Training,Training programs teach braille display navigation.
+Education & Training,Workshops demonstrate accessible smartphone features.
+Education & Training,Courses cover accessible web browsing techniques.
+Education & Training,Training teaches use of OCR for reading printed materials.
+Education & Training,Programs introduce assistive hardware devices.
+Education & Training,Instruction includes voice assistant accessibility features.
+Education & Training,Classes teach magnification and contrast customization.
+Education & Training,Training covers accessible document creation.
+Education & Training,Workshops explain mobile accessibility gestures.
+Education & Training,Courses include accessible email and messaging techniques.
+Education & Training,Training teaches safe navigation with GPS tools.
+Education & Training,Programs cover use of braille notetakers.
+Education & Training,Instruction includes managing accessibility settings.
+Education & Training,Workshops teach accessible social media use.
+Education & Training,Courses introduce audio labeling techniques.
+Education & Training,Training covers troubleshooting assistive software.
+Education & Training,Programs teach accessible file management.
+Education & Training,Instruction includes using screen readers with spreadsheets.
+Education & Training,Workshops cover accessibility in online learning platforms.
+Education & Training,Courses teach evaluation of accessible technology.
